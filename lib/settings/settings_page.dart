@@ -13,7 +13,7 @@ class SettingsPage extends StatelessWidget {
             'Account Settings',
             style: TextStyle(
               fontSize: 24,
-              color: Colors.white,
+              color: Colors.grey,
             ),
           ),
           Card(
