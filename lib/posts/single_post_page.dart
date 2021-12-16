@@ -1,6 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/data/app_data.dart';
+import 'package:flutter_app/data/app_data.dart';
 
 class SinglePostPage extends StatelessWidget {
   final int postId;

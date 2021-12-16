@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/posts/posts_page.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/posts/single_post_page.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/settings/settings_page.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/users/user_profile_page.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/users/users_page.dart';
+import 'package:flutter_app/posts/posts_page.dart';
+import 'package:flutter_app/posts/single_post_page.dart';
+import 'package:flutter_app/settings/settings_page.dart';
+import 'package:flutter_app/users/user_profile_page.dart';
+import 'package:flutter_app/users/users_page.dart';
 import '../home_page.dart';
 
 @MaterialAutoRouter(

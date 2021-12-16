@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bottom_navigation_with_nested_routing_tutorial/routes/router.gr.dart';
+import 'package:flutter_app/routes/router.gr.dart';
 
 void main() => runApp(AppWidget());
 

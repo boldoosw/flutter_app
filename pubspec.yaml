@@ -1,6 +1,6 @@
-name: flutter_bottom_navigation_with_nested_routing_tutorial
+name: flutter_app
 description: Flutter Bottom Navigation with Nested Routing Tutorial.
-publish_to: 'none' 
+publish_to: 'none'
 version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -8,16 +8,94 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  auto_route: 3.2.0
-  salomon_bottom_bar: ^3.1.0
+  flutter_svg: ^0.23.0+1
+  assorted_layout_widgets: ^5.2.1
   cupertino_icons: ^1.0.2
-
+  auto_route: ^2.3.2
+  graphql_flutter: ^5.0.0
+  http: ^0.13.4
+  syncfusion_flutter_pdfviewer: ^19.3.54-beta
+  local_auth: ^1.1.8
+#  google_maps_flutter: ^2.1.0
+#  google_maps_flutter_web: ^0.3.2
+#  geolocator: ^7.7.1
+  provider: ^6.0.1
+  dotted_line: ^3.1.0
+  salomon_bottom_bar: ^3.1.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  auto_route_generator: 3.2.0
+  flutter_lints: ^1.0.0
+  auto_route_generator: ^2.3.2
   build_runner: ^2.1.2
 
+flutter_icons:
+  android : true
+  ios: true
+  image_path: "assets/images/logo.png"
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/pdf/
+    - assets/icons/
+    - assets/fonts/
+
+    - assets/images/logo.png
+
+    - assets/google_map_style.txt
+
+
+    # bottom naivation icons
+    - assets/icons/navigation_icons/pin.svg
+    - assets/icons/navigation_icons/user.svg
+    - assets/icons/navigation_icons/wallet.svg
+    - assets/icons/navigation_icons/clock.svg
+
+    # home icons
+    - assets/icons/map_red_marker.svg
+    - assets/icons/left_arrow.svg
+    - assets/icons/right_arrow.svg
+    - assets/icons/location_text_marker.svg
+    - assets/icons/round_correct.svg
+
+    - assets/icons/log-out.svg
+    - assets/icons/Exclude.svg
+  fonts:
+    - family: MyFlutterApp # the name of your font family
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
+      # Roboto Font
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Roboto/Roboto-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto/Roboto-BoldItalic.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto/Roboto-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto/Roboto-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto/Roboto-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Roboto/Roboto-ThinItalic.ttf
+          weight: 100
+          style: italic
 flutter:
   uses-material-design: true

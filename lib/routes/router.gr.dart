@@ -1,7 +1,3 @@
-// **************************************************************************
-// AutoRouteGenerator
-// **************************************************************************
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -47,7 +43,7 @@ class AppRouter extends _i2.RootStackRouter {
           routeData: routeData, child: _i4.PostsPage(key: args.key));
     },
     SinglePostRoute.name: (routeData) {
-      final pathParams = routeData.inheritedPathParams;
+      final pathParams = routeData.pathParams;
       final args = routeData.argsAs<SinglePostRouteArgs>(
           orElse: () =>
               SinglePostRouteArgs(postId: pathParams.getInt('postId')));
@@ -60,7 +56,7 @@ class AppRouter extends _i2.RootStackRouter {
           routeData: routeData, child: const _i6.UsersPage());
     },
     UserProfileRoute.name: (routeData) {
-      final pathParams = routeData.inheritedPathParams;
+      final pathParams = routeData.pathParams;
       final args = routeData.argsAs<UserProfileRouteArgs>(
           orElse: () =>
               UserProfileRouteArgs(userId: pathParams.getInt('userId')));
@@ -73,70 +69,54 @@ class AppRouter extends _i2.RootStackRouter {
   @override
   List<_i2.RouteConfig> get routes => [
         _i2.RouteConfig(HomeRoute.name, path: '/', children: [
-          _i2.RouteConfig(PostsRouter.name,
-              path: 'posts',
-              parent: HomeRoute.name,
-              children: [
-                _i2.RouteConfig(PostsRoute.name,
-                    path: '', parent: PostsRouter.name),
-                _i2.RouteConfig(SinglePostRoute.name,
-                    path: ':postId', parent: PostsRouter.name)
-              ]),
-          _i2.RouteConfig(UsersRouter.name,
-              path: 'users',
-              parent: HomeRoute.name,
-              children: [
-                _i2.RouteConfig(UsersRoute.name,
-                    path: '', parent: UsersRouter.name),
-                _i2.RouteConfig(UserProfileRoute.name,
-                    path: ':userId', parent: UsersRouter.name)
-              ]),
-          _i2.RouteConfig(SettingsRouter.name,
-              path: 'settings', parent: HomeRoute.name)
+          _i2.RouteConfig(PostsRouter.name, path: 'posts', children: [
+            _i2.RouteConfig(PostsRoute.name, path: ''),
+            _i2.RouteConfig(SinglePostRoute.name, path: ':postId')
+          ]),
+          _i2.RouteConfig(UsersRouter.name, path: 'users', children: [
+            _i2.RouteConfig(UsersRoute.name, path: ''),
+            _i2.RouteConfig(UserProfileRoute.name, path: ':userId')
+          ]),
+          _i2.RouteConfig(SettingsRouter.name, path: 'settings')
         ])
       ];
 }
 
-/// generated route for
-/// [_i1.HomePage]
+/// generated route for [_i1.HomePage]
 class HomeRoute extends _i2.PageRouteInfo<void> {
   const HomeRoute({List<_i2.PageRouteInfo>? children})
-      : super(HomeRoute.name, path: '/', initialChildren: children);
+      : super(name, path: '/', initialChildren: children);
 
   static const String name = 'HomeRoute';
 }
 
-/// generated route for
-/// [_i2.EmptyRouterPage]
+/// generated route for [_i2.EmptyRouterPage]
 class PostsRouter extends _i2.PageRouteInfo<void> {
   const PostsRouter({List<_i2.PageRouteInfo>? children})
-      : super(PostsRouter.name, path: 'posts', initialChildren: children);
+      : super(name, path: 'posts', initialChildren: children);
 
   static const String name = 'PostsRouter';
 }
 
-/// generated route for
-/// [_i2.EmptyRouterPage]
+/// generated route for [_i2.EmptyRouterPage]
 class UsersRouter extends _i2.PageRouteInfo<void> {
   const UsersRouter({List<_i2.PageRouteInfo>? children})
-      : super(UsersRouter.name, path: 'users', initialChildren: children);
+      : super(name, path: 'users', initialChildren: children);
 
   static const String name = 'UsersRouter';
 }
 
-/// generated route for
-/// [_i3.SettingsPage]
+/// generated route for [_i3.SettingsPage]
 class SettingsRouter extends _i2.PageRouteInfo<void> {
-  const SettingsRouter() : super(SettingsRouter.name, path: 'settings');
+  const SettingsRouter() : super(name, path: 'settings');
 
   static const String name = 'SettingsRouter';
 }
 
-/// generated route for
-/// [_i4.PostsPage]
+/// generated route for [_i4.PostsPage]
 class PostsRoute extends _i2.PageRouteInfo<PostsRouteArgs> {
   PostsRoute({_i8.Key? key})
-      : super(PostsRoute.name, path: '', args: PostsRouteArgs(key: key));
+      : super(name, path: '', args: PostsRouteArgs(key: key));
 
   static const String name = 'PostsRoute';
 }
@@ -145,18 +125,12 @@ class PostsRouteArgs {
   const PostsRouteArgs({this.key});
 
   final _i8.Key? key;
-
-  @override
-  String toString() {
-    return 'PostsRouteArgs{key: $key}';
-  }
 }
 
-/// generated route for
-/// [_i5.SinglePostPage]
+/// generated route for [_i5.SinglePostPage]
 class SinglePostRoute extends _i2.PageRouteInfo<SinglePostRouteArgs> {
   SinglePostRoute({_i8.Key? key, required int postId})
-      : super(SinglePostRoute.name,
+      : super(name,
             path: ':postId',
             args: SinglePostRouteArgs(key: key, postId: postId),
             rawPathParams: {'postId': postId});
@@ -170,26 +144,19 @@ class SinglePostRouteArgs {
   final _i8.Key? key;
 
   final int postId;
-
-  @override
-  String toString() {
-    return 'SinglePostRouteArgs{key: $key, postId: $postId}';
-  }
 }
 
-/// generated route for
-/// [_i6.UsersPage]
+/// generated route for [_i6.UsersPage]
 class UsersRoute extends _i2.PageRouteInfo<void> {
-  const UsersRoute() : super(UsersRoute.name, path: '');
+  const UsersRoute() : super(name, path: '');
 
   static const String name = 'UsersRoute';
 }
 
-/// generated route for
-/// [_i7.UserProfilePage]
+/// generated route for [_i7.UserProfilePage]
 class UserProfileRoute extends _i2.PageRouteInfo<UserProfileRouteArgs> {
   UserProfileRoute({_i8.Key? key, required int userId})
-      : super(UserProfileRoute.name,
+      : super(name,
             path: ':userId',
             args: UserProfileRouteArgs(key: key, userId: userId),
             rawPathParams: {'userId': userId});
@@ -203,9 +170,4 @@ class UserProfileRouteArgs {
   final _i8.Key? key;
 
   final int userId;
-
-  @override
-  String toString() {
-    return 'UserProfileRouteArgs{key: $key, userId: $userId}';
-  }
 }
